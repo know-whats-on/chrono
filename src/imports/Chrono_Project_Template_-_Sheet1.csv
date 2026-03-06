@@ -1,0 +1,17 @@
+Type,Milestone,Task,Allocated Hours,Due Date,Notes
+Milestone,Discovery & Planning,,,,
+Task,Discovery & Planning,Stakeholder interviews,4,2026-03-09,Gather requirements from key stakeholders
+Task,Discovery & Planning,Competitive analysis,3,2026-03-11,Review 5 competitor sites
+Task,Discovery & Planning,Project brief & scope,2,2026-03-13,$500 retainer / Define deliverables
+Milestone,Design,,,,
+Task,Design,Wireframes,6,2026-03-18,Low-fi layouts for 8 pages
+Task,Design,Visual mockups,10,2026-03-25,$1200 / High-fi designs in Figma
+Task,Design,Design review & revisions,4,2026-03-28,Up to 2 rounds of revisions
+Milestone,Development,,,,
+Task,Development,Frontend build,20,2026-04-10,$3000 / React + Tailwind
+Task,Development,Backend & API integration,14,2026-04-17,Supabase auth + database
+Task,Development,CMS setup,6,2026-04-21,Content migration & training
+Milestone,Testing & Launch,,,,
+Task,Testing & Launch,QA & cross-browser testing,8,2026-04-25,Chrome / Safari / Firefox / mobile
+Task,Testing & Launch,Performance optimization,4,2026-04-28,Target Lighthouse 90+
+Task,Testing & Launch,Launch & DNS cutover,2,2026-04-30,$200 hosting / Go live
