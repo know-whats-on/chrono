@@ -1,0 +1,18 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* ── Prevent all zoom on mobile (app-like behavior) ── */
+
+/* Prevent double-tap zoom everywhere */
+* {
+  touch-action: manipulation;
+}
+
+/* iOS zooms inputs with font-size < 16px — force 16px minimum */
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  font-size: max(16px, 1em) !important;
+}

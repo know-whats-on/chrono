@@ -1,0 +1,440 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+
+  /* --- Liquid glass palette (light) --- */
+  --background: #f0f2f8;
+  --foreground: #0f0f1a;
+  --card: rgba(255, 255, 255, 0.62);
+  --card-foreground: #0f0f1a;
+  --popover: rgba(255, 255, 255, 0.78);
+  --popover-foreground: #0f0f1a;
+  --primary: #1e1b4b;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255, 255, 255, 0.50);
+  --secondary-foreground: #1e1b4b;
+  --muted: rgba(0, 0, 0, 0.05);
+  --muted-foreground: #64648a;
+  --accent: rgba(255, 255, 255, 0.45);
+  --accent-foreground: #1e1b4b;
+  --destructive: #dc2646;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.35);
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.55);
+  --switch-background: rgba(0, 0, 0, 0.12);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(30, 27, 75, 0.25);
+
+  /* Glass tokens */
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-bg-elevated: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-shadow: 0 2px 16px rgba(0, 0, 0, 0.06), 0 0.5px 1px rgba(0, 0, 0, 0.04);
+  --glass-shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.10), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --glass-blur: blur(20px) saturate(160%);
+  --glass-sheen: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 50%);
+
+  /* Background gradient */
+  --bg-gradient: linear-gradient(145deg, #f0e6f6 0%, #f5ede4 25%, #ede4f0 50%, #e4eef6 75%, #f0e6f0 100%);
+  --radius: 0.75rem;
+  --sidebar: rgba(255, 255, 255, 0.60);
+  --sidebar-foreground: #0f0f1a;
+  --sidebar-primary: #1e1b4b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(255, 255, 255, 0.40);
+  --sidebar-accent-foreground: #1e1b4b;
+  --sidebar-border: rgba(255, 255, 255, 0.30);
+  --sidebar-ring: rgba(30, 27, 75, 0.20);
+}
+
+.dark {
+  --background: #0c0c14;
+  --foreground: #eaeaf2;
+  --card: rgba(255, 255, 255, 0.06);
+  --card-foreground: #eaeaf2;
+  --popover: rgba(255, 255, 255, 0.10);
+  --popover-foreground: #eaeaf2;
+  --primary: #c4c0ff;
+  --primary-foreground: #0f0d2e;
+  --secondary: rgba(255, 255, 255, 0.08);
+  --secondary-foreground: #eaeaf2;
+  --muted: rgba(255, 255, 255, 0.07);
+  --muted-foreground: #8e8ea8;
+  --accent: rgba(255, 255, 255, 0.08);
+  --accent-foreground: #eaeaf2;
+  --destructive: #f43f5e;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.10);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.07);
+  --switch-background: rgba(255, 255, 255, 0.12);
+  --ring: rgba(196, 192, 255, 0.25);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+
+  /* Glass tokens (dark) */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg-elevated: rgba(255, 255, 255, 0.10);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 2px 16px rgba(0, 0, 0, 0.20), 0 0.5px 1px rgba(0, 0, 0, 0.15);
+  --glass-shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.25);
+  --glass-sheen: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 50%);
+
+  /* Background gradient (dark) */
+  --bg-gradient: linear-gradient(145deg, #12101a 0%, #140f14 25%, #100e16 50%, #0e1018 75%, #12101a 100%);
+
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: rgba(255, 255, 255, 0.05);
+  --sidebar-foreground: #eaeaf2;
+  --sidebar-primary: #c4c0ff;
+  --sidebar-primary-foreground: #0f0d2e;
+  --sidebar-accent: rgba(255, 255, 255, 0.07);
+  --sidebar-accent-foreground: #eaeaf2;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: rgba(196, 192, 255, 0.20);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--foreground);
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+    min-height: 100dvh;
+    overflow: auto;
+  }
+
+  /* Subtle grain overlay for texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px 128px;
+  }
+
+  /* Soft sand-like drifting hue animation */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background:
+      radial-gradient(ellipse 600px 500px at 30% 20%, rgba(244, 180, 210, 0.4), transparent 70%),
+      radial-gradient(ellipse 500px 600px at 70% 60%, rgba(180, 210, 244, 0.35), transparent 70%),
+      radial-gradient(ellipse 400px 400px at 50% 40%, rgba(240, 220, 190, 0.3), transparent 70%),
+      radial-gradient(ellipse 350px 500px at 20% 70%, rgba(200, 190, 240, 0.3), transparent 70%);
+    animation: sand-drift 25s ease-in-out infinite;
+  }
+
+  @keyframes sand-drift {
+    0%, 100% {
+      transform: translate(0%, 0%) rotate(0deg);
+    }
+    25% {
+      transform: translate(5%, -3%) rotate(1deg);
+    }
+    50% {
+      transform: translate(-3%, 5%) rotate(-0.5deg);
+    }
+    75% {
+      transform: translate(-5%, -2%) rotate(0.5deg);
+    }
+  }
+
+  html {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    /* Prevent iOS text size adjustment after orientation change */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+    /* iOS zooms when font-size < 16px — enforce 16px minimum */
+    font-size: max(16px, var(--text-base));
+    touch-action: manipulation;
+  }
+
+  textarea {
+    font-size: max(16px, var(--text-base));
+    font-family: var(--font-family);
+    touch-action: manipulation;
+  }
+
+  select {
+    font-size: max(16px, var(--text-base));
+    touch-action: manipulation;
+  }
+
+  button, a {
+    /* Suppress 300ms tap delay */
+    touch-action: manipulation;
+  }
+}
+
+/* ====== GLASS UTILITY CLASSES ====== */
+
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--glass-sheen);
+    pointer-events: none;
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  .glass > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .glass-elevated {
+    background: var(--glass-bg-elevated);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow-elevated);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-elevated::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--glass-sheen);
+    pointer-events: none;
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  .glass-elevated > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .glass-nav {
+    background: var(--glass-bg-elevated);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-color: var(--glass-border);
+    box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.04);
+  }
+
+  .glass-input {
+    background: var(--input-background);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid var(--glass-border);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .glass-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--ring);
+  }
+
+  .glass-btn-primary {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.10);
+    transition: opacity 0.2s, transform 0.15s;
+  }
+
+  .glass-btn-primary:hover {
+    opacity: 0.92;
+  }
+
+  .glass-btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  /* Modal overlay with proper z-index and safe area */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .modal-overlay {
+      align-items: center;
+    }
+  }
+
+  .modal-sheet {
+    background: var(--glass-bg-elevated);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow-elevated);
+    border-radius: 1.25rem 1.25rem 0 0;
+    width: 100%;
+    max-width: 24rem;
+    max-height: calc(100dvh - env(safe-area-inset-top, 0px) - 24px);
+    overflow-y: auto;
+    position: relative;
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  @media (min-width: 768px) {
+    .modal-sheet {
+      border-radius: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+  }
+
+  .modal-sheet::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--glass-sheen);
+    pointer-events: none;
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  .modal-sheet > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* ====== MOBILE INPUT ZOOM PREVENTION ====== */
+/* On touch devices, force all focusable form elements to ≥16px so iOS/Android
+   never triggers auto-zoom, even when a Tailwind text-sm utility is applied. */
+@media (hover: none) and (pointer: coarse) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
